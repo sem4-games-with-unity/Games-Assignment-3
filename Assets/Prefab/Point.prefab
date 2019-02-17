@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5310206592858187245}
   - component: {fileID: 5310206592858187244}
   - component: {fileID: 315233364505239105}
+  - component: {fileID: 5890591684901127080}
   m_Layer: 0
   m_Name: Point
   m_TagString: Untagged
@@ -28,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5310206592858187218}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0002888441, y: 16.88, z: 80.8}
+  m_LocalPosition: {x: 5, y: 111, z: 22}
   m_LocalScale: {x: 20, y: 20, z: 20}
   m_Children: []
   m_Father: {fileID: 0}
@@ -102,5 +103,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7f279660e68f1ac4aa18fa18ab3ce1a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5890591684901127080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5310206592858187218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa12f29369689f9418b81976e5ea86a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
