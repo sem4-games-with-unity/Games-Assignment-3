@@ -19,14 +19,15 @@ public class MovePointScript : MonoBehaviour
 
     IEnumerator PointMover()
     {
+        WaitForSeconds wait = new WaitForSeconds(10f);
         while (true)
         {
-            yield return new WaitForSeconds(10f);
+            yield return wait;
             if (Random.value < 0.25f)
             {
                 transform.DOMove(new Vector3(Random.Range(-1000f, 1000f), Random.Range(50f, 150f), Random.Range(-1000f, 1000f)), Random.value).SetEase(Ease.OutBounce);
             }
-            yield return new WaitForEndOfFrame();
+//            yield return new WaitForEndOfFrame();
         }
     }
 }
