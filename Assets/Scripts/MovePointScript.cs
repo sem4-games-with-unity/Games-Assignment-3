@@ -25,7 +25,8 @@ public class MovePointScript : MonoBehaviour
             yield return wait;
             if (Random.value < 0.25f)
             {
-                transform.DOMove(new Vector3(Random.Range(-1000f, 1000f), Random.Range(50f, 150f), Random.Range(-1000f, 1000f)), Random.value).SetEase(Ease.OutBounce);
+                transform.DOMove(new Vector3(Random.Range(-1000f, 1000f), Random.Range(50f, 150f), Random.Range(-1000f, 1000f)),
+                                 Random.value * 60).SetEase(Ease.OutBounce);
             }
 //            yield return new WaitForEndOfFrame();
         }
