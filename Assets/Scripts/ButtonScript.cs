@@ -17,7 +17,7 @@ public class ButtonScript : MonoBehaviour
 
     public void RespawnCar()
     {
-        car.transform.position = new Vector3(0, 0, 0);
+        car.transform.position = new Vector3(0, 0, -500);
         car.transform.rotation = Quaternion.identity;
         car.transform.GetComponent<Rigidbody>().velocity = new Vector3() * 0;
     }

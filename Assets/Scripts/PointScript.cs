@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class PointScript : MonoBehaviour
 {
     public GameObject point;
@@ -16,6 +17,7 @@ public class PointScript : MonoBehaviour
         SpawnPoints();
         score = 0;
         UpdateScore();
+        
     }
 
     // Update is called once per frame
@@ -28,7 +30,7 @@ public class PointScript : MonoBehaviour
     {
         for (int i = 0; i < count; i++)
         {
-            Vector3 position = new Vector3(i * Random.Range(-100, 100), Random.Range(50, 150), i * Random.Range(-100, 100));
+            Vector3 position = new Vector3(i * Random.Range(-100f, 100f), Random.Range(50f, 150f), i * Random.Range(-100f, 100f));
             Instantiate(point, position, Quaternion.identity);
         }
     }
@@ -42,5 +44,14 @@ public class PointScript : MonoBehaviour
     void UpdateScore()
     {
         scoreText.GetComponent<UnityEngine.UI.Text>().text = "Score: " + score;
+        StartCoroutine("FlashText");
+    }
+
+    IEnumerator FlashText()
+    {
+        scoreText.GetComponent<UnityEngine.UI.Text>().fontSize = 25;
+        yield return new WaitForSeconds(.5f);
+        scoreText.GetComponent<UnityEngine.UI.Text>().fontSize = 20;
+        yield return null;
     }
 }
